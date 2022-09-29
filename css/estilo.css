@@ -53,11 +53,11 @@ nav ul {
 }
 ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
 }  
 a { 
-    font-size: 15px;
+    font-size: 16px;
     color: white;
     text-decoration: none;
     font-weight: bold;   
@@ -74,7 +74,7 @@ a {
         background: url(../img/principal/canicheprincipal.jpg);
         background-size: cover;
         background-position: center;    
-    }
+}
 .tituloText {
         padding-bottom: 40%;
         font-family: 'Rubik Mono One', sans-serif;
@@ -136,7 +136,7 @@ a {
     color: grey;
     margin-top: 3em;
 }
-.nosotros h3 {
+.nosotros h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 5% 1% 2% 5%;  
 }
@@ -177,40 +177,46 @@ a {
     color: grey;
     border-bottom: 10px solid #ece2c6;
     margin-top: 3em;
+    font-family: 'Roboto Slab', serif;
 }
 .imgServicios img {
     width: 280px;
     height: 180px;
 }
-
 .imgServicios {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    margin-top: 15px;
 }
 .serviciosRealizadosTitulo {
     text-align: center;
-    border-bottom: 2px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
 }
 .serviciosRealizadosSubtitulo {
-font-style: italic;
-text-align: center;
-}
-.serviciosRealizados h5 {
     font-style: italic;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
 }
-.serviciosRealizadosImg img {
-    width: 300px;
+.serviciosRealizados h4 {
+    font-style: italic;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+#carouselExampleInterval img {
+    width: 300px !important;
     height: 300px;
     border: 2px solid gainsboro;
+    margin-left: 35%;
 }
-.serviciosRealizadosImg{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-}
+
 /*fin de servicios*/
 
 .productos {
@@ -254,6 +260,7 @@ fieldset {
     background-color: grey;
     width: 100%;
     margin-bottom: 0; 
+    margin-top: 60px;
 }
 .footer h4 {
     font-weight: 100;
@@ -263,9 +270,10 @@ fieldset {
     text-align: center;
     margin-top: 5px;
 } 
-.redes img{  
-    height: 40px ;
-    width: 40px;   
+.footer img{  
+    height: 35px ;
+    width: 35px;  
+    padding-left: 5px; 
 }
 
 @media (min-width: 600px) {
@@ -278,16 +286,21 @@ fieldset {
         "seccionIndex"
         "footer"; 
     }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }  
     .seccionIndex{
     display: flex;
     flex-direction: row;
     justify-content: center;    
     margin-top: 12%;
-}
-.seccionIndex img {
-    height: 200px;
-    width: 200px;
-    border: 2px solid gainsboro;
+    }
+    .seccionIndex img {
+        height: 200px;
+        width: 200px;
+        border: 2px solid gainsboro;
    } 
 }
 
@@ -300,81 +313,70 @@ fieldset {
     "seccionParrafo seccionIndex"
     "footer footer";
     grid-template-columns: 2fr 2fr;
-}
-header {
+    }
+    header {
     display: grid;
     grid-template-columns: 1fr 5fr;
-}
-nav {
+    }
+    nav {
     margin-top: 1.6em;
-}
-.encabezado a {
+    }
+    .encabezado a {
     font-weight: bold;
     border-bottom: 3px solid gainsboro;   
-}
+    }
 /*fin de header*/
 
 /* main*/
-.titulo {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/principal/canicheprincipal.jpg);
-    background-size: cover;
-    background-position: center;    
-}
-.tituloText {
-    font-size: 1em;
-    text-align: center;
-    padding-top: 50%;
-}
-.seccionIndex{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;    
-    margin-top: 12%;
-}
-.seccionIndex img {
-    height: 220px;
-} 
-/*fin de index*/
+    .titulo {
+        height: 600px;
+    }
+    .tituloText {
+        font-size: 1em;
+    }
+    .seccionIndex{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;    
+        margin-top: 12%;
+    }
+    .seccionIndex img {
+        height: 220px;
+    } 
+    /*fin de index*/
 
-.nosotros {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    .nosotros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-/*servicios*/
-.serviciosRealizadosTitulo {
-    text-align: center;
-    margin: 7% 40% 3% 40%;
-    border-bottom: 2px solid gainsboro;
-}
-.serviciosRealizadosSubtitulo {
-    font-style: italic;
-    text-align: center;
-    margin: 1% 10% 1% 10%;
+    /*servicios*/
+
+    .serviciosRealizadosTitulo {
+        text-align: center;
+        margin: 7% 40% 3% 40%;
+        border-bottom: 2px solid gainsboro;
+    }
+    .serviciosRealizadosSubtitulo {
+        font-style: italic;
+        text-align: center;
+        margin: 1% 10% 1% 10%;
     }    
-    .serviciosRealizados h5 {
-    font-style: italic;
-    margin: 1% 10% 1% 10%;
+        .serviciosRealizados h5 {
+        font-style: italic;
+        margin: 1% 10% 1% 10%;
     }
     .serviciosRealizadosImg img {
-        width: 300px;
-        height: 300px;
-        margin: 40px 10px 50px 10px;
-        border: 2px solid gainsboro;
+            width: 300px;
+            height: 300px;
+            margin: 40px 10px 50px 10px;
+            border: 2px solid gainsboro;
     }
-
+}
 @media (min-width: 1024px) {
     .nosotrosTitulo {
-        text-align: center;
         margin: 5% 35% 5% 35%;
-        font-weight: bold;
         border-bottom: 6px solid #ece2c6;
-        color: grey;
     }
     .nosotros img {
         display: none;
@@ -385,57 +387,64 @@ nav {
         margin-left: 20px;
         margin-right: 20px;
     }
-    .nosotros h3 {
+    .nosotros h2 {
         margin-top: 0px;
         margin-bottom: 0px;
         margin-right: 0px;
     }
-    .presentacion {
-            width: 100%;
-            height: 350px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: url(../img/nosotros/images.jpg);
-            background-size: cover;
-            background-position: flex-end;  
-            margin-bottom: 60px;  
+    .imgServicios {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 2em;
+        text-align: center;
     }
-    .presentacion h3 {
+    .presentacion {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/nosotros/images.jpg);
+        background-size: cover;
+        background-position: flex-end;  
+        margin-bottom: 60px;  
+    }
+    .presentacion h2 {
         font-weight: bold;
         margin-left: 550px;
         text-align: center;
         color: grey;
         font-size: 20px;
-}
-.presentacion p{
-    margin-left: 600px;
-}
-.mora {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/nosotros/cabecera_desenredado.jpg);
-    background-size: cover;
-    background-position: flex-end;  
-    margin-bottom: 60px;  
-}
-.mora h3 {
-    font-weight: bold;
-    color:black;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-}
-.mora p {
-    margin-left: 600px;
-}
-.pasitos {
+    }
+    .presentacion p{
+        margin-left: 600px;
+    }
+    .mora {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/nosotros/cabecera_desenredado.jpg);
+        background-size: cover;
+        background-position: flex-end;  
+        margin-bottom: 60px;  
+    }
+    .mora h2 {
+        font-weight: bold;
+        color:black;
+        margin-left: 550px;
+        text-align: center;
+        color: grey;
+        font-size: 20px;
+    }
+    .mora p {
+        margin-left: 600px;
+    }
+    .pasitos {
         width: 100%;
         height: 350px;
         display: flex;
@@ -446,75 +455,116 @@ nav {
         background-size: cover;
         background-position: flex-end; 
         margin-bottom: 60px;   
-}
-.pasitos h3 {
-    font-weight: bold;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-}
-.pasitos p {
-    margin-left: 600px;
-}
-.comienzos {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/nosotros/perritospeluqueria.jpg);
-    background-size: cover;
-    background-position: flex-end; 
-    margin-bottom: 60px;   
-}
-.comienzos h3 {
-    font-weight: bold;
-    color:black;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-}
-.comienzos p {
-    margin-left: 600px;
-}
+    }
+    .pasitos h2 {
+        font-weight: bold;
+        margin-left: 550px;
+        text-align: center;
+        color: grey;
+        font-size: 20px;
+    }
+    .pasitos p {
+        margin-left: 600px;
+    }
+    .comienzos {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        align-items: center;
+        justify-content: center;
+        background: url(../img/nosotros/perritospeluqueria.jpg);
+        background-size: cover;
+        background-position: flex-end; 
+        margin-bottom: 60px;   
+    }
+    .comienzos h2 {
+        font-weight: bold;
+        color:black;
+        margin-left: 550px;
+        text-align: center;
+        color: grey;
+        font-size: 20px;
+    }
+    .comienzos p {
+        margin-left: 600px;
+    }
+
+    /* servicios*/
+    .mainServicios {
+        margin: 5% 35% 5% 35%;
+        border-bottom: 6px solid #ece2c6;
+    }
+    .servicios1:hover {
+        transform: scale(1.2);
+    }
+    .servicios1 {
+        transition: all 3s;
+    }
+    .servicios2:hover {
+        transform: scale(1.2);
+    }
+    .servicios2 {
+        transition: all 3s;
+    }
+    .servicios3:hover {
+        transform: scale(1.2);
+    }
+    .servicios3 {
+        transition: all 3s;
+    }
     .serviciosRealizadosTitulo {
         text-align: center;
         margin: 7% 40% 3% 40%;
         border-bottom: 3px solid #ece2c6;
     }
-    /*fin de servicios*/
+  
+        /*fin de servicios*/
 
-.productos {
-    text-align: center;
-    color: grey;
-    border-bottom: 6px solid #ece2c6;
-    margin: 5% 33% 1% 33%;
-}
-.conectanos {
-    text-align: center;
-    border-bottom: 6px solid #ece2c6;;
-    margin: 5% 39% 5% 39%;
-}
-    .footer {
+    .productos {
+        text-align: center;
+        color: grey;
+        border-bottom: 6px solid #ece2c6;
+        margin: 5% 33% 1% 33%;
+    }
+    .conectanos {
+        text-align: center;
+        border-bottom: 6px solid #ece2c6;;
+        margin: 5% 39% 5% 39%;
+    }
+    .footer1 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
         margin-bottom: 0; 
-        margin-top: 10%;
     }
     .footerTitulo {
-        font-weight: 100;
-        font-style: italic;
-        color: white;
-        text-align: center;
+            font-weight: 100;
+            font-style: italic;
+            color: white;
+            text-align: center;
     }
-    .footerSubtitulo {
-        margin: 1px 1px 2px 28px;
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
     }
-}
+    .envios{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+    .pedidos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
 }
