@@ -1,3 +1,33 @@
+/*grilla servicios*/
+.mainServicios {
+    grid-area: mainServicios;
+}
+.servicios {
+    grid-area: servicios;
+}
+.serviciosRealizados {
+    grid-area: serviciosRealizados;
+}
+.contenedor {
+    grid-area: contenedor;
+}
+.grillaServicios {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "mainServicios"
+    "servicios"
+    "serviciosRealizados"
+    "contenedor"
+    "footer";
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .mainServicios{
     text-align: center;
     color: grey;
@@ -7,10 +37,7 @@
 }
 
 .imgServicios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex-column-center;
     text-align: center;
     margin-top: 15px;
         img {
@@ -46,9 +73,7 @@ ul li {
 }
 ul.slider {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-column-center;
     height: 200px;
         li{
             position: absolute;

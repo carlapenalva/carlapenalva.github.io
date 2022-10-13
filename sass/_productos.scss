@@ -1,3 +1,19 @@
+
+/*grilla productos*/
+.productos {
+    grid-area: mainProductos
+    }
+    .productosImagen {
+        grid-area: productosImagen;
+    }
+    .grillaProductos {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "mainProductos"
+        "productosImagen"
+        "footer";
+}
 .productos{
     text-align: center;
     color: grey;

@@ -1,3 +1,19 @@
+
+/*grilla Sobre nosotros*/
+.mainNosotros {
+    grid-area: mainNosotros;
+}
+.nosotros {
+    grid-area: seccionNosotros;
+}
+.grillaNosotros{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "mainNosotros"
+    "seccionNosotros"
+    "footer";
+}
 .nosotros {
     display: flex;
     flex-direction: column;
