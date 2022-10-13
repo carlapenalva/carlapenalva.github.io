@@ -1,0 +1,30 @@
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 5% 1% 2% 5%;  
+        }
+        p {
+            font-size: 18px;
+            text-align: start;
+            margin: 10px 10px 10px 20px;
+        }
+        img {
+            width: 200px;
+            height: 250px;
+            margin-bottom: 5%;
+            margin-top: 3%;
+            border: 2px solid gainsboro;
+        }
+}
+.nosotrosTitulo {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 10px solid rgb(184, 164, 164);
+    color: grey;
+    margin-top: 3em;
+}
+
+/*fin de seccion nosotros*/

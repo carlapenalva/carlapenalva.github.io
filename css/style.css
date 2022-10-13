@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62, 5%;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: whitesmoke;
+  min-height: 100vh;
+}
+
+.titulo {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/principal/canicheprincipal.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tituloText {
+  padding-bottom: 40%;
+  font-family: "Rubik Mono One", sans-serif;
+  font-weight: bold;
+  font-size: 0.5em;
+  -webkit-text-stroke: 1px black;
+  color: gainsboro;
+  text-align: center;
+  padding-top: 50%;
+}
+
+.seccionParrafo h2 {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 15%;
+  border-bottom: 4px solid rgb(184, 164, 164);
+}
+.seccionParrafo p {
+  text-align: center;
+  margin: 10px 10px 15px 20px;
+}
+
+.seccionIndex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+.seccionIndex img {
+  height: 200px;
+  width: 100%;
+  border: 2px solid gainsboro;
+}
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nosotros h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 5% 1% 2% 5%;
+}
+.nosotros p {
+  font-size: 18px;
+  text-align: start;
+  margin: 10px 10px 10px 20px;
+}
+.nosotros img {
+  width: 200px;
+  height: 250px;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  border: 2px solid gainsboro;
+}
+
+.nosotrosTitulo {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 10px solid rgb(184, 164, 164);
+  color: grey;
+  margin-top: 3em;
+}
+
+/*fin de seccion nosotros*/
+.mainServicios {
+  text-align: center;
+  color: grey;
+  border-bottom: 10px solid rgb(184, 164, 164);
+  margin-top: 3em;
+  font-family: "Roboto Slab", serif;
+}
+
+.imgServicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15px;
+}
+.imgServicios img {
+  width: 280px;
+  height: 180px;
+}
+
+.serviciosRealizadosTitulo {
+  text-align: center;
+  border-bottom: 1px solid gainsboro;
+  font-family: "Roboto Slab", serif;
+  font-size: 25px;
+}
+
+.serviciosRealizadosSubtitulo {
+  font-style: italic;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+}
+
+.serviciosRealizados h4 {
+  font-style: italic;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.contendedorSlider {
+  width: 100%;
+  background-color: white;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+ul.slider li {
+  position: absolute;
+  opacity: 1;
+  height: inherit;
+  transition: opacity 0.5s;
+}
+ul.slider li img {
+  width: 300px;
+  height: 150px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu li a {
+  color: black;
+  padding: 5px;
+}
+
+/*fin de servicios*/
+.conectanos {
+  text-align: center;
+  color: grey;
+  border-bottom: 10px solid rgb(184, 164, 164);
+  margin-top: 3em;
+}
+
+form {
+  width: 100vw;
+  background-color: rgb(198, 218, 180);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+form h2 {
+  margin: 10px;
+  color: whitesmoke;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+}
+form input, form textarea {
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+#boton {
+  background-color: white;
+  border: none;
+  padding: 20px;
+}
+
+#boton:hover {
+  cursor: pointer;
+}
+
+iframe {
+  width: 100vw;
+}
+
+/*grilla*/
+header {
+  grid-area: header;
+}
+
+.mainIndex {
+  grid-area: mainIndex;
+}
+
+.seccionParrafo {
+  grid-area: seccionParrafo;
+}
+
+.seccionIndex {
+  grid-area: seccionIndex;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grillaIndex {
+  display: grid;
+  grid-template-areas: "header" "mainIndex" "seccionParrafo" "seccionIndex" "footer";
+}
+
+/*Sobre nosotros*/
+/*grilla*/
+.mainNosotros {
+  grid-area: mainNosotros;
+}
+
+.nosotros {
+  grid-area: seccionNosotros;
+}
+
+.grillaNosotros {
+  display: grid;
+  grid-template-areas: "header" "mainNosotros" "seccionNosotros" "footer";
+}
+
+/*grilla servicios*/
+.mainServicios {
+  grid-area: mainServicios;
+}
+
+.servicios {
+  grid-area: servicios;
+}
+
+.serviciosRealizados {
+  grid-area: serviciosRealizados;
+}
+
+.contenedor {
+  grid-area: contenedor;
+}
+
+.grillaServicios {
+  display: grid;
+  grid-template-areas: "header" "mainServicios" "servicios" "serviciosRealizados" "contenedor" "footer";
+}
+
+/*grilla productos*/
+.productos {
+  grid-area: mainProductos;
+}
+
+.productosImagen {
+  grid-area: productosImagen;
+}
+
+.grillaProductos {
+  display: grid;
+  grid-template-areas: "header" "mainProductos" "productosImagen" "footer";
+}
+
+/*grilla CONTACTO*/
+main {
+  grid-area: mainContacto;
+}
+
+form {
+  grid-area: form;
+}
+
+.mapa {
+  grid-area: mapa;
+}
+
+.grillaContacto {
+  display: grid;
+  grid-template-areas: "header" "mainContacto" "form" "mapa" "footer";
+}
+
+/*fin de contacto*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 60px;
+}
+
+.footer h4 {
+  font-weight: 100;
+  font-size: 1em;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.footer img {
+  height: 35px;
+  width: 35px;
+  padding-left: 5px;
+}
+
+@media (min-width: 600px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-areas: "header" "mainIndex" "seccionParrafo" "seccionIndex" "footer";
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .seccionIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 12%;
+  }
+  .seccionIndex img {
+    height: 200px;
+    width: 200px;
+    border: 2px solid gainsboro;
+  }
+}
+@media (min-width: 768px) {
+  .grillaIndex {
+    display: grid;
+    grid-template-areas: "header header" "mainIndex mainIndex" "seccionParrafo seccionIndex" "footer footer";
+    grid-template-columns: 2fr 2fr;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  nav {
+    margin-top: 1.6em;
+  }
+  .encabezado a {
+    font-weight: bold;
+    border-bottom: 3px solid gainsboro;
+  }
+  /*fin de header*/
+  /* main*/
+  .titulo {
+    height: 600px;
+  }
+  .tituloText {
+    font-size: 1em;
+  }
+  .seccionIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 12%;
+  }
+  .seccionIndex img {
+    height: 220px;
+  }
+  /*fin de index*/
+  .nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /*servicios*/
+  .serviciosRealizadosTitulo {
+    text-align: center;
+    margin: 7% 40% 3% 40%;
+    border-bottom: 2px solid gainsboro;
+  }
+  .serviciosRealizadosSubtitulo {
+    font-style: italic;
+    text-align: center;
+    margin: 1% 10% 1% 10%;
+  }
+  .serviciosRealizados h5 {
+    font-style: italic;
+    margin: 1% 10% 1% 10%;
+  }
+  .serviciosRealizadosImg img {
+    width: 300px;
+    height: 300px;
+    margin: 40px 10px 50px 10px;
+    border: 2px solid gainsboro;
+  }
+  ul.slider {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+  }
+  ul.slider li {
+    position: absolute;
+    opacity: 1;
+    height: 400px;
+    transition: opacity 0.5s;
+  }
+  ul.slider li img {
+    width: 600px;
+    height: 350px;
+  }
+  .productosImagen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grillaContacto {
+    display: grid;
+    grid-template-areas: "header header" "mainContacto mainContacto" "form mapa" "footer footer";
+  }
+  .grillaContacto {
+    grid-template-columns: 1fr 2fr;
+  }
+  form {
+    width: 400px;
+    margin-left: 20px;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .nosotrosTitulo {
+    margin: 5% 35% 5% 35%;
+    border-bottom: 6px solid #ece2c6;
+  }
+  .nosotros img {
+    display: none;
+  }
+  .nosotros {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .nosotros h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  .imgServicios {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2em;
+    text-align: center;
+  }
+  .presentacion {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/images.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+  }
+  .presentacion h2 {
+    font-weight: bold;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .presentacion p {
+    margin-left: 600px;
+  }
+  .mora {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/cabecera_desenredado.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+  }
+  .mora h2 {
+    font-weight: bold;
+    color: black;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .mora p {
+    margin-left: 600px;
+  }
+  .pasitos {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/canicheblanco.png);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+  }
+  .pasitos h2 {
+    font-weight: bold;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .pasitos p {
+    margin-left: 600px;
+  }
+  .comienzos {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/peluqueria-canina-1.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+  }
+  .comienzos h2 {
+    font-weight: bold;
+    color: black;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .comienzos p {
+    margin-left: 600px;
+  }
+  /* servicios*/
+  .mainServicios {
+    margin: 5% 35% 5% 35%;
+    border-bottom: 6px solid #ece2c6;
+  }
+  .servicios1:hover {
+    transform: scale(1.2);
+  }
+  .servicios1 {
+    transition: all 3s;
+  }
+  .servicios2:hover {
+    transform: scale(1.2);
+  }
+  .servicios2 {
+    transition: all 3s;
+  }
+  .servicios3:hover {
+    transform: scale(1.2);
+  }
+  .servicios3 {
+    transition: all 3s;
+  }
+  .serviciosRealizadosTitulo {
+    text-align: center;
+    margin: 7% 40% 3% 40%;
+    border-bottom: 3px solid #ece2c6;
+  }
+  /*fin de servicios*/
+  .productos {
+    text-align: center;
+    color: grey;
+    border-bottom: 6px solid #ece2c6;
+    margin: 5% 33% 1% 33%;
+  }
+  .conectanos {
+    text-align: center;
+    border-bottom: 6px solid #ece2c6;
+    margin: 5% 39% 5% 39%;
+  }
+  .footer1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .footerTitulo {
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+    text-align: center;
+  }
+  .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .envios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+  .pedidos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */

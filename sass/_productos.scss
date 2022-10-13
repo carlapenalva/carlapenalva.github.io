@@ -1,0 +1,28 @@
+.productos{
+    text-align: center;
+    color: grey;
+    border-bottom: 10px solid rgb(184, 164, 164);
+    margin-top: 3em;
+}
+.mainProductos {
+    h2 {
+    text-align: center;
+    color: grey;
+    font-size: medium;
+    }
+}
+.productosImagen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+        img{
+            height: 300px;
+            width: 250px;
+            margin-top: 50px;
+            margin-bottom: 5px;
+            border: 2px solid gainsboro;
+        }
+}
+ 

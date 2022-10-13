@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Peluqueria Mora</title>
      <!-- css -->
     <link rel="stylesheet" href="../css/estilo.css">
+    <title>Contacto - Peluqueria Mora</title>
 </head>
 
 <body>
@@ -35,47 +35,26 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <div class="conectanos">
-            <h1> CONTACTANOS</h1>
+    <div class="grillaContacto">
+        <main>
+            <div class="conectanos">
+                <h1> CONTACTANOS</h1>
+            </div>
+        </main>
+        <form>
+            <h2>PEDI TU TURNO</h2>
+            <input type="text" placeholder="Nombre completo">
+            <input type="text" placeholder="Nombre de tu peludo" >
+            <input type="text" placeholder="Numero de telefono">
+            <input type="date" id="fecha">
+            <input type="text" placeholder="Horario">
+            <textarea name="mensaje" placeholder="Servicio a realizar"></textarea>
+            <input type="submit" id="boton">
+        </form>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99835.03832018175!2d-58.82631639975773!3d-38.56038604808119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x958fbd434330e9e9%3A0x7f7c099276fb322!2sNecochea%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1665618142994!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-    </main>
-   
-    <form>
-        <fieldset>
-            <legend>Completa tus datos</legend>
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido">
-            </div>
-            <div>
-                <label for="mascota">Nombre de tu peludo</label>
-                <input type="text" id="mascota">
-            </div>
-            <div>
-                <label for="telefono">Numero de telefono</label>
-                <input type="text" id="telefono">
-            </div>
-            <div>
-                <label for="fecha">Fecha</label>
-                <input type="date" name="" id="fecha">
-                <label for="hora">Hora</label>
-                <input type="number">
-            </div>
-            <div>
-                <label for="servicio">Servicio a realizar</label>
-                <input type="text" id="servicio">
-            </div>
-            <div>
-                <input type="submit">
-                <input type="reset" name="borrar">
-            </div>
-        </fieldset>
-    </form>
-
+    </div>  
     <footer class="footer">
         <h4>Todos los derechos reservados © Carla Penalva</h4> 
         <div class="footer1">

@@ -1,0 +1,43 @@
+.conectanos {
+    text-align: center;
+    color: grey;
+    border-bottom: 10px solid rgb(184, 164, 164);
+    margin-top: 3em;
+}
+form {
+    width: 100vw;
+    background-color: rgb(198, 218, 180);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+        h2 {
+            margin: 10px;
+            color: whitesmoke;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;   
+            font-size: large;
+        }
+        input, textarea{
+            margin: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 16px;
+            border: none;
+        }
+}
+
+#boton {
+    background-color: white;
+    border: none;
+    padding: 20px;
+}
+#boton:hover {
+    cursor: pointer;
+}
+iframe {
+    width: 100vw;
+}

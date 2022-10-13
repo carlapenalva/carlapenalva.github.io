@@ -1,0 +1,44 @@
+.titulo {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/principal/canicheprincipal.jpg);
+    background-size: cover;
+    background-position: center;    
+}
+.tituloText {
+    padding-bottom: 40%;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-weight: bold;
+    font-size: 0.5em;
+    -webkit-text-stroke: 1px black;
+    color:gainsboro;
+    text-align: center;
+    padding-top: 50%;
+}
+.seccionParrafo {
+    h2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 15%;   
+    border-bottom: 4px solid rgb(184, 164, 164);
+    }
+    p {
+        text-align: center;
+        margin: 10px 10px 15px 20px;
+}
+}
+.seccionIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+        img {
+        height: 200px;
+        width: 100%;
+        border: 2px solid gainsboro;
+        } 
+}
