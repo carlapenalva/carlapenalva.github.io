@@ -1,6 +1,4 @@
-
-/*grilla productos*/
-.productos {
+.mainProductos {
     grid-area: mainProductos
     }
     .productosImagen {
@@ -13,32 +11,62 @@
         "mainProductos"
         "productosImagen"
         "footer";
-}
-.productos{
-    text-align: center;
-    color: grey;
-    border-bottom: 10px solid rgb(184, 164, 164);
-    margin-top: 3em;
-}
-.mainProductos {
-    h2 {
-    text-align: center;
-    color: grey;
-    font-size: medium;
     }
+    .mainProductos {
+        h1{
+        text-align: center;
+        color: $titulo;   
+        border-bottom: 2px solid rgb(184, 164, 164);
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding-bottom: 60px;
+        }
+        .mainProductos h2 {
+        text-align: center;
+        color: grey;
+        font-size: medium;
+        }
 }
-.productosImagen{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: small;
+    .productosImagen{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: small;
         img{
             height: 300px;
             width: 250px;
             margin-top: 50px;
             margin-bottom: 5px;
-            border: 2px solid gainsboro;
+            border-radius: 10px;
+            box-shadow: 5px 5px 7px;
         }
+    }
+
+
+@media (min-width: 768px) {
+    .grillaProductos {
+        gap: 1em;
+        padding: 1em; 
+    }
+    .mainProductos {
+     h1{
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgb(31, 31, 31);
+        margin-top: 1em;
+    }
+    }
 }
- 
+@media (min-width:820px) {
+    .productosImagen{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (min-width: 1024px) {
+    .productos {
+        text-align: center;
+        color: grey;
+        margin: 5% 33% 1% 33%;
+    }
+}

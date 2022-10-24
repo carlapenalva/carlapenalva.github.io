@@ -16,7 +16,7 @@ body {
 }
 
 .encabezado {
-  background-color: grey;
+  background-color: rgb(48, 48, 48);
   width: 100%;
   margin-top: 0px;
   position: -webkit-sticky;
@@ -27,18 +27,27 @@ body {
 nav ul {
   list-style-type: none;
 }
-nav ul ul {
+
+nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-nav ul ul a {
+nav ul a {
   font-size: 16px;
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
+/*fin de header*/
+@media (min-width: 600px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 /*grilla*/
 header {
   grid-area: header;
@@ -65,6 +74,7 @@ footer {
   grid-template-areas: "header" "mainIndex" "seccionParrafo" "seccionIndex" "footer";
 }
 
+/* main*/
 .titulo {
   width: 100%;
   height: 300px;
@@ -87,15 +97,45 @@ footer {
   padding-top: 50%;
 }
 
+.seccionParrafo {
+  margin-top: 10%;
+}
 .seccionParrafo h2 {
   text-align: center;
   font-size: 1.2em;
-  margin-top: 15%;
-  border-bottom: 4px solid rgb(184, 164, 164);
+  margin-bottom: 5px;
+  border-bottom: 1px solid white;
 }
 .seccionParrafo p {
   text-align: center;
-  margin: 10px 10px 15px 20px;
+  margin: 10px 10px 10px 10px;
+}
+
+.seccionParrafo1 {
+  background-color: rgb(48, 48, 48);
+  margin: 5px 5px 5px 5px;
+  padding: 10px;
+  gap: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.seccionParrafo2 {
+  background-color: rgb(48, 48, 48);
+  margin: 5px 5px 5px 5px;
+  padding: 10px;
+  gap: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.seccionParrafo3 {
+  background-color: rgb(48, 48, 48);
+  margin: 5px 5px 5px 5px;
+  padding: 10px;
+  gap: 10px;
+  color: white;
+  border-radius: 5px;
 }
 
 .seccionIndex {
@@ -108,10 +148,43 @@ footer {
 .seccionIndex img {
   height: 200px;
   width: 100%;
-  border: 2px solid gainsboro;
+  border-radius: 7px;
+  box-shadow: 10px 0 5px grey, -10px 0 10px grey;
 }
 
-/*grilla Sobre nosotros*/
+@media (min-width: 600px) {
+  .seccionParrafo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .seccionIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12%;
+  }
+  .seccionIndex img {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .titulo {
+    height: 600px;
+  }
+  .tituloText {
+    font-size: 1em;
+  }
+  .seccionIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 12%;
+  }
+  .seccionIndex img {
+    height: 220px;
+    box-shadow: 0 -10 10px grey;
+  }
+}
 .mainNosotros {
   grid-area: mainNosotros;
 }
@@ -132,6 +205,7 @@ footer {
 }
 .nosotros h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: grey;
   margin: 5% 1% 2% 5%;
 }
 .nosotros p {
@@ -144,7 +218,8 @@ footer {
   height: 250px;
   margin-bottom: 5%;
   margin-top: 3%;
-  border: 2px solid gainsboro;
+  box-shadow: 5px 5px 7px 3px grey;
+  border-radius: 5px;
 }
 
 .nosotrosTitulo {
@@ -155,8 +230,133 @@ footer {
   margin-top: 3em;
 }
 
-/*fin de seccion nosotros*/
-/*grilla servicios*/
+@media (min-width: 768px) {
+  .grillaNosotros {
+    gap: 1em;
+    padding: 1em;
+  }
+  .nosotrosTitulo {
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgb(31, 31, 31);
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .nosotros {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .nosotros img {
+    display: none;
+  }
+  .nosotros h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+  .presentacion {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/images.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+    box-shadow: 5px 5px 7px grey;
+  }
+  .presentacion h2 {
+    font-weight: bold;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .presentacion p {
+    margin-left: 600px;
+  }
+  .mora {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/cabecera_desenredado.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+    box-shadow: 5px 5px 7px grey;
+  }
+  .mora h2 {
+    font-weight: bold;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .mora p {
+    margin-left: 600px;
+  }
+  .pasitos {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/canicheblanco.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+    box-shadow: 5px 5px 7px grey;
+  }
+  .pasitos h2 {
+    font-weight: bold;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .pasitos p {
+    margin-left: 600px;
+  }
+  .comienzos {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/nosotros/peluqueria-canina-1.jpg);
+    background-size: cover;
+    background-position: flex-end;
+    margin-bottom: 60px;
+    box-shadow: 5px 5px 7px grey;
+  }
+  .comienzos h2 {
+    font-weight: bold;
+    color: black;
+    margin-left: 550px;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+  }
+  .comienzos p {
+    margin-left: 600px;
+  }
+}
 .mainServicios {
   grid-area: mainServicios;
 }
@@ -222,8 +422,10 @@ footer {
 }
 
 .contendedorSlider {
-  width: 100%;
+  margin: auto;
   background-color: white;
+  width: 800px;
+  padding: 20px;
 }
 
 ul li {
@@ -233,14 +435,14 @@ ul li {
 ul.slider {
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 200px;
 }
+
 ul.slider li {
   position: absolute;
-  opacity: 1;
+  opacity: 0;
   height: inherit;
   transition: opacity 0.5s;
 }
@@ -249,279 +451,61 @@ ul.slider li img {
   height: 150px;
 }
 
+ul.slider li img {
+  width: 300px;
+  height: 150px;
+}
+
+ul.slider li:first-child {
+  opacity: 1;
+}
+
+ul.slider li:target {
+  opacity: 1;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 .menu li a {
-  color: black;
-  padding: 5px;
+  color: rgb(48, 48, 48);
+  margin: 5px;
 }
 
-/*fin de servicios*/
-/*grilla CONTACTO*/
-main {
-  grid-area: mainContacto;
+.yorkshire img {
+  width: 250px;
+  height: 180px;
 }
 
-form {
-  grid-area: form;
-}
-
-.mapa {
-  grid-area: mapa;
-}
-
-.grillaContacto {
-  display: grid;
-  grid-template-areas: "header" "mainContacto" "form" "mapa" "footer";
-}
-
-.conectanos {
-  text-align: center;
-  color: grey;
-  border-bottom: 10px solid rgb(184, 164, 164);
-  margin-top: 3em;
-}
-
-form {
-  width: 100vw;
-  background-color: rgb(198, 218, 180);
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 7px;
+.yorkshireImg {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
-}
-form h2 {
-  margin: 10px;
-  color: whitesmoke;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: large;
-}
-form input, form textarea {
-  margin: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 16px;
-  border: none;
-}
-
-#boton {
-  background-color: white;
-  border: none;
-  padding: 20px;
-}
-
-#boton:hover {
-  cursor: pointer;
-}
-
-iframe {
-  width: 100vw;
-}
-
-/*grilla*/
-header {
-  grid-area: header;
-}
-
-.mainIndex {
-  grid-area: mainIndex;
-}
-
-.seccionParrafo {
-  grid-area: seccionParrafo;
-}
-
-.seccionIndex {
-  grid-area: seccionIndex;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.grillaIndex {
-  display: grid;
-  grid-template-areas: "header" "mainIndex" "seccionParrafo" "seccionIndex" "footer";
-}
-
-/*Sobre nosotros*/
-/*grilla*/
-.mainNosotros {
-  grid-area: mainNosotros;
-}
-
-.nosotros {
-  grid-area: seccionNosotros;
-}
-
-.grillaNosotros {
-  display: grid;
-  grid-template-areas: "header" "mainNosotros" "seccionNosotros" "footer";
-}
-
-/*grilla servicios*/
-.mainServicios {
-  grid-area: mainServicios;
-}
-
-.servicios {
-  grid-area: servicios;
-}
-
-.serviciosRealizados {
-  grid-area: serviciosRealizados;
-}
-
-.contenedor {
-  grid-area: contenedor;
-}
-
-.grillaServicios {
-  display: grid;
-  grid-template-areas: "header" "mainServicios" "servicios" "serviciosRealizados" "contenedor" "footer";
-}
-
-/*grilla productos*/
-.productos {
-  grid-area: mainProductos;
-}
-
-.productosImagen {
-  grid-area: productosImagen;
-}
-
-.grillaProductos {
-  display: grid;
-  grid-template-areas: "header" "mainProductos" "productosImagen" "footer";
-}
-
-/*grilla CONTACTO*/
-main {
-  grid-area: mainContacto;
-}
-
-form {
-  grid-area: form;
-}
-
-.mapa {
-  grid-area: mapa;
-}
-
-.grillaContacto {
-  display: grid;
-  grid-template-areas: "header" "mainContacto" "form" "mapa" "footer";
-}
-
-/*fin de contacto*/
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: grey;
-  width: 100%;
-  margin-bottom: 0;
-  margin-top: 60px;
 }
 
-.footer h4 {
-  font-weight: 100;
-  font-size: 1em;
-  font-style: italic;
-  color: white;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.footer img {
-  height: 35px;
-  width: 35px;
-  padding-left: 5px;
-}
-
-@media (min-width: 600px) {
-  .grillaIndex {
-    display: grid;
-    grid-template-areas: "header" "mainIndex" "seccionParrafo" "seccionIndex" "footer";
-  }
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .seccionIndex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 12%;
-  }
-  .seccionIndex img {
-    height: 200px;
-    width: 200px;
-    border: 2px solid gainsboro;
-  }
-}
 @media (min-width: 768px) {
-  .grillaIndex {
-    display: grid;
-    grid-template-areas: "header header" "mainIndex mainIndex" "seccionParrafo seccionIndex" "footer footer";
-    grid-template-columns: 2fr 2fr;
+  .grillaServicios {
+    gap: 3em;
+    padding: 2em;
   }
-  header {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
+  .mainServicios {
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgb(31, 31, 31);
+    margin-top: 1em;
   }
-  nav {
-    margin-top: 1.6em;
-  }
-  .encabezado a {
-    font-weight: bold;
-    border-bottom: 3px solid gainsboro;
-  }
-  /*fin de header*/
-  /* main*/
-  .titulo {
-    height: 600px;
-  }
-  .tituloText {
-    font-size: 1em;
-  }
-  .seccionIndex {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 12%;
-  }
-  .seccionIndex img {
-    height: 220px;
-  }
-  /*fin de index*/
-  .nosotros {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  /*servicios*/
   .serviciosRealizadosTitulo {
     text-align: center;
-    margin: 7% 40% 3% 40%;
-    border-bottom: 2px solid gainsboro;
   }
   .serviciosRealizadosSubtitulo {
     font-style: italic;
     text-align: center;
-    margin: 1% 10% 1% 10%;
   }
   .serviciosRealizados h5 {
     font-style: italic;
-    margin: 1% 10% 1% 10%;
   }
   .serviciosRealizadosImg img {
     width: 300px;
@@ -530,163 +514,27 @@ form {
     border: 2px solid gainsboro;
   }
   ul.slider {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     height: 400px;
     width: 100%;
-  }
-  ul.slider li {
-    position: absolute;
-    opacity: 1;
-    height: 400px;
-    transition: opacity 0.5s;
   }
   ul.slider li img {
     width: 600px;
     height: 350px;
   }
-  .productosImagen {
+}
+@media (min-width: 820px) {
+  .yorkshireImg {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .grillaContacto {
-    display: grid;
-    grid-template-areas: "header header" "mainContacto mainContacto" "form mapa" "footer footer";
-  }
-  .grillaContacto {
-    grid-template-columns: 1fr 2fr;
-  }
-  form {
-    width: 400px;
-    margin-left: 20px;
-  }
-  iframe {
-    width: 100%;
-  }
 }
 @media (min-width: 1024px) {
-  .nosotrosTitulo {
-    margin: 5% 35% 5% 35%;
-  }
-  .nosotros img {
-    display: none;
-  }
-  .nosotros {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .nosotros h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-  }
   .imgServicios {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 2em;
     text-align: center;
-  }
-  .presentacion {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/nosotros/images.jpg);
-    background-size: cover;
-    background-position: flex-end;
-    margin-bottom: 60px;
-  }
-  .presentacion h2 {
-    font-weight: bold;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-  }
-  .presentacion p {
-    margin-left: 600px;
-  }
-  .mora {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/nosotros/cabecera_desenredado.jpg);
-    background-size: cover;
-    background-position: flex-end;
-    margin-bottom: 60px;
-  }
-  .mora h2 {
-    font-weight: bold;
-    color: black;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-  }
-  .mora p {
-    margin-left: 600px;
-  }
-  .pasitos {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/nosotros/canicheblanco.png);
-    background-size: cover;
-    background-position: flex-end;
-    margin-bottom: 60px;
-  }
-  .pasitos h2 {
-    font-weight: bold;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-  }
-  .pasitos p {
-    margin-left: 600px;
-  }
-  .comienzos {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    align-items: center;
-    justify-content: center;
-    background: url(../img/nosotros/peluqueria-canina-1.jpg);
-    background-size: cover;
-    background-position: flex-end;
-    margin-bottom: 60px;
-  }
-  .comienzos h2 {
-    font-weight: bold;
-    color: black;
-    margin-left: 550px;
-    text-align: center;
-    color: grey;
-    font-size: 20px;
-  }
-  .comienzos p {
-    margin-left: 600px;
-  }
-  /* servicios*/
-  .mainServicios {
-    margin: 5% 35% 5% 35%;
   }
   .servicios1:hover {
     transform: scale(1.2);
@@ -709,26 +557,194 @@ form {
   .serviciosRealizadosTitulo {
     text-align: center;
     margin: 7% 40% 3% 40%;
-    border-bottom: 3px solid #ece2c6;
   }
-  /*fin de servicios*/
+}
+.mainProductos {
+  grid-area: mainProductos;
+}
+
+.productosImagen {
+  grid-area: productosImagen;
+}
+
+.grillaProductos {
+  display: grid;
+  grid-template-areas: "header" "mainProductos" "productosImagen" "footer";
+}
+
+.mainProductos h1 {
+  text-align: center;
+  color: grey;
+  border-bottom: 2px solid rgb(184, 164, 164);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 60px;
+}
+.mainProductos .mainProductos h2 {
+  text-align: center;
+  color: grey;
+  font-size: medium;
+}
+
+.productosImagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+.productosImagen img {
+  height: 300px;
+  width: 250px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 7px;
+}
+
+@media (min-width: 768px) {
+  .grillaProductos {
+    gap: 1em;
+    padding: 1em;
+  }
+  .mainProductos h1 {
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgb(31, 31, 31);
+    margin-top: 1em;
+  }
+}
+@media (min-width: 820px) {
+  .productosImagen {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
   .productos {
     text-align: center;
     color: grey;
-    border-bottom: 6px solid #ece2c6;
     margin: 5% 33% 1% 33%;
   }
+}
+main {
+  grid-area: mainContacto;
+}
+
+form {
+  grid-area: form;
+}
+
+.mapa {
+  grid-area: mapa;
+}
+
+.grillaContacto {
+  display: grid;
+  grid-template-areas: "header" "mainContacto" "form" "mapa" "footer";
+}
+
+.conectanos {
+  text-align: center;
+  color: grey;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgb(31, 31, 31);
+  margin-top: 1em;
+}
+
+form {
+  width: 100vw;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+form h2 {
+  margin: 10px;
+  color: rgb(88, 88, 88);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+input, textarea {
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+#boton {
+  background-color: white;
+  border: none;
+  padding: 20px;
+}
+
+#boton:hover {
+  cursor: pointer;
+}
+
+iframe {
+  width: 100vw;
+}
+
+@media (min-width: 768px) {
+  .grillaContacto {
+    display: grid;
+    grid-template-areas: "header header" "mainContacto mainContacto" "form mapa" "footer footer";
+  }
+  .grillaContacto {
+    gap: 3em;
+    padding: 2em;
+    grid-template-columns: 1fr 2fr;
+  }
+  form {
+    width: 400px;
+    margin-left: 20px;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
   .conectanos {
     text-align: center;
-    margin: 5% 39% 5% 39%;
   }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(48, 48, 48);
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 60px;
+}
+.footer h4 {
+  font-weight: 100;
+  font-size: 1em;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+.footer .footer img {
+  height: 35px;
+  width: 35px;
+  padding-left: 5px;
+}
+
+@media (min-width: 1024px) {
   .footer1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     margin-bottom: 0;
   }
-  .footerTitulo {
+  .footer h4 {
     font-weight: 100;
     font-style: italic;
     color: white;

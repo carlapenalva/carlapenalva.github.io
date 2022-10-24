@@ -1,2 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62,5%;
+}
+body {
+    font-family: 'Roboto Slab', serif;
+    background-color: whitesmoke;
+    min-height: 100vh;
+}

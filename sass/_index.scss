@@ -1,4 +1,3 @@
-
 /*grilla*/
 header {
     grid-area: header;
@@ -24,7 +23,10 @@ header {
         "seccionIndex"
         "footer";
     }
-    
+
+@mixin center {
+    text-align: center;
+}
 .titulo {
     width: 100%;
     height: 300px;
@@ -46,26 +48,86 @@ header {
     padding-top: 50%;
 }
 .seccionParrafo {
+margin-top: 10%; 
     h2 {
-    text-align: center;
-    font-size: 1.2em;
-    margin-top: 15%;   
-    border-bottom: 4px solid rgb(184, 164, 164);
-    }
+        @include center;
+        font-size: 1.2em;  
+        margin-bottom: 5px;
+        border-bottom: 1px solid white;
+        }
     p {
-        text-align: center;
-        margin: 10px 10px 15px 20px;
+        @include center;
+        margin: 10px 10px 10px 10px;
+    }
 }
+
+.seccionParrafo1 {
+background-color: rgb(48, 48, 48);
+margin: 5px 5px 5px 5px;
+padding: 10px;
+gap: 10px;
+color: white;
+border-radius: 5px;
+}
+.seccionParrafo2 {
+background-color: rgb(48, 48, 48);
+margin: 5px 5px 5px 5px;
+padding: 10px;
+gap: 10px;
+color: white;
+border-radius: 5px;
+}
+.seccionParrafo3 {
+background-color: rgb(48, 48, 48);
+margin: 5px 5px 5px 5px;
+padding: 10px;
+gap: 10px;
+color: white;
+border-radius: 5px;
 }
 .seccionIndex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: small;
-        img {
+display: flex;
+flex-direction: column;
+align-items: center;
+@include center;
+font-size: small;
+    img {
         height: 200px;
         width: 100%;
-        border: 2px solid gainsboro;
+        border-radius: 7px;
+        box-shadow: 10px 0 5px grey, -10px 0 10px grey;
         } 
+}
+@media (min-width: 600px) {
+    .seccionParrafo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .seccionIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin-top: 12%;
+        img {
+        height: 200px;
+        width: 200px;
+        } 
+    } 
+}
+@media (min-width: 768px) {
+    .titulo {
+        height: 600px;
+    }
+    .tituloText {
+        font-size: 1em;
+    }
+    .seccionIndex{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;  
+        margin-top: 12%;
+        img {
+            height: 220px;
+            box-shadow: 0 -10 10px grey;
+        } 
+    }  
 }
