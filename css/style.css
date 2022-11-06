@@ -192,7 +192,7 @@ footer {
 }
 
 .seccionIndex {
-  margin-top: 70px;
+  margin-top: 7em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -327,11 +327,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/nosotros/images.jpg);
     background-size: cover;
     background-position: flex-end;
     margin-bottom: 60px;
     box-shadow: 5px 5px 7px grey;
+    background: url(../img/nosotros/images.jpg);
   }
   .nosotros .presentacion h2 {
     font-weight: bold;
@@ -350,11 +350,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/nosotros/cabecera_desenredado.jpg);
     background-size: cover;
     background-position: flex-end;
     margin-bottom: 60px;
     box-shadow: 5px 5px 7px grey;
+    background: url(../img/nosotros/cabecera_desenredado.jpg);
   }
   .nosotros .mora h2 {
     font-weight: bold;
@@ -373,11 +373,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url(../img/nosotros/canicheblanco.jpg);
     background-size: cover;
     background-position: flex-end;
     margin-bottom: 60px;
     box-shadow: 5px 5px 7px grey;
+    background: url(../img/nosotros/canicheblanco.jpg);
   }
   .nosotros .pasitos h2 {
     font-weight: bold;
@@ -576,12 +576,6 @@ ul.slider li:target {
   .serviciosRealizados {
     margin: 2em;
   }
-  .serviciosRealizadosImg img {
-    width: 300px;
-    height: 300px;
-    margin: 40px 10px 50px 10px;
-    border: 2px solid gainsboro;
-  }
   ul.slider {
     height: 400px;
     width: 100%;
@@ -624,10 +618,6 @@ ul.slider li:target {
   }
   .servicios3 {
     transition: all 3s;
-  }
-  .serviciosRealizadosTitulo {
-    text-align: center;
-    margin: 2em 4em 2em 2em;
   }
 }
 .mainProductos {
@@ -684,13 +674,6 @@ ul.slider li:target {
   .productosImagen {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1024px) {
-  .productos {
-    text-align: center;
-    color: grey;
-    margin: 5% 33% 1% 33%;
   }
 }
 main {
@@ -823,12 +806,6 @@ iframe {
   iframe {
     width: 100%;
   }
-  /*   background-color: rgb(48, 48, 48); */
-}
-@media (min-width: 1024px) {
-  .conectanos {
-    text-align: center;
-  }
 }
 .footer {
   display: flex;
@@ -861,12 +838,6 @@ iframe {
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     margin-bottom: 0;
-  }
-  .footer h4 {
-    font-weight: 100;
-    font-style: italic;
-    color: white;
-    text-align: center;
   }
   .redes, .pedidos, .envios {
     display: flex;

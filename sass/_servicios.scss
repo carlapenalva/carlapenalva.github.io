@@ -52,32 +52,32 @@
     padding-bottom: 4em;
     padding-top: 2em;
     margin-bottom: 4em;
-    h2 {
-    text-align: center;
-    padding-bottom: 1em;
-    border-bottom: 1px solid white;
-    font-family: 'Roboto Slab', serif;
-    color: white;
-    font-size: 25px;
-    margin-bottom: 1em;
-    }
-    h3 {
-    font-style: italic;
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
-    color: white;
-    font-size: 18px;
-    margin-top: 20px;
-    }
-    h4 {
-    font-style: italic;
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
-    color: white;
-    font-size: 16px;
-    margin-bottom: 2em;
-    margin-top: 2em;
-    }
+        h2 {
+        text-align: center;
+        padding-bottom: 1em;
+        border-bottom: 1px solid white;
+        font-family: 'Roboto Slab', serif;
+        color: white;
+        font-size: 25px;
+        margin-bottom: 1em;
+        }
+        h3 {
+        font-style: italic;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        color: white;
+        font-size: 18px;
+        margin-top: 20px;
+        }
+        h4 {
+        font-style: italic;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        color: white;
+        font-size: 16px;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        }
 }
 .slider {
     z-index: 1;
@@ -130,10 +130,12 @@ ul.slider li:target {
     color: white;
     margin: 5px;
 }
-.yorkshire img {
+.yorkshire {
+    img {
     width: 250px;
     height: 180px;
 } 
+}
 .yorkshireImg {
     display: flex;
     flex-direction: column;
@@ -150,13 +152,7 @@ ul.slider li:target {
         margin: 2em;
     }
     
-    .serviciosRealizadosImg img {
-            width: 300px;
-            height: 300px;
-            margin: 40px 10px 50px 10px;
-            border: 2px solid gainsboro;
-        }
-      
+    
         ul.slider {
             height: 400px;
             width: 100%;
@@ -200,8 +196,5 @@ ul.slider li:target {
     .servicios3 {
         transition: all 3s;
     }
-    .serviciosRealizadosTitulo {
-        text-align: center;
-        margin: 2em 4em 2em 2em;
-    }
+
 }
