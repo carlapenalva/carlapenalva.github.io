@@ -14,14 +14,15 @@
     }
     .mainProductos {
         h1{
-        text-align: center;
-        color: $titulo;   
-        border-bottom: 2px solid rgb(184, 164, 164);
-        margin-top: 1em;
-        margin-bottom: 1em;
-        padding-bottom: 60px;
+            text-align: center;
+            color: $titulo;
+            border-bottom: 1px solid black;
+            margin-bottom: 2em;
+            padding: 1em 0.5em 2em 0.5em;
+            font-family: 'Roboto Slab', serif;
+            font-size: 2em;
         }
-        .mainProductos h2 {
+        h2 {
         text-align: center;
         color: grey;
         font-size: medium;
@@ -46,15 +47,8 @@
 
 @media (min-width: 768px) {
     .grillaProductos {
-        gap: 1em;
-        padding: 1em; 
-    }
-    .mainProductos {
-     h1{
-        padding-bottom: 60px;
-        border-bottom: 1px solid rgb(31, 31, 31);
-        margin-top: 1em;
-    }
+        gap: 2em;
+        padding: 1em;   
     }
 }
 @media (min-width:820px) {

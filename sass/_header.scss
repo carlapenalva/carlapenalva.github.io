@@ -3,28 +3,108 @@
     width: 100%;
     margin-top: 0px;
     position: sticky;
-    top: 0px; 
+    z-index: 99;
+    top: 0px;
 }
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 nav ul {
     list-style-type: none;  
 }
-nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    a { 
+@mixin a {
         font-size: 16px;
         color: white;
         text-decoration: none;
-        font-weight: bold;   
+        font-weight: bold;  
+}
+
+@media (max-width: 767px) {
+#menu-check {
+    display: none;
+}
+#menu-check:not(:checked) ~ nav,ul,li {
+    display: none;
+}
+#menu-check:checked ~ nav,ul,li {
+    display: block;
+} 
+#menu {
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    border: solid 2px white;
+    border-radius: 0.3em;
+    padding: 1px 4px 1px 4px;
+    right: 1em;
+    top: 1em;
+    z-index: 99;
+}
+#menu:hover {
+    color:rgb(48, 48, 48);
+    background-color: whitesmoke;
+}
+#menu-cerrar {
+    display: none;
+}
+#menu-check:checked ~ label #menu-abrir {
+    display: none;
+}
+#menu-check:checked ~ label #menu-cerrar {
+    display: block;
+}
+
+.encabezado {
+    nav {
+        position: absolute;
+        height: 10em;
+        top: 0;
+        right: 0;
+        background-color: rgb(48, 48, 48);
+        padding: 0.8em 5em 0.8em 0.8em;
+        opacity: 0.8;
+    }
+}
+nav {
+    ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.5em;
+    li {
+        margin-bottom: 0.5em;
+    }
+    a { 
+        @include a;
+        padding: 0.5em;
+        
     }
 }  
+}
+}
 
-/*fin de header*/
-@media (min-width: 600px) {
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}  
+@media (min-width: 768px) {
+    .encabezado {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        nav {
+            display: block;
+            margin-top: 30px;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+                a {
+                    @include a;
+                }
+        }
+    }
+    #menu, #menu-check {
+    display: none;
+    }
 }

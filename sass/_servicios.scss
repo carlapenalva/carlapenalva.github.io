@@ -21,11 +21,15 @@
     "footer";
 }
 .mainServicios{
+    h1{
     text-align: center;
     color: $titulo;
-    border-bottom: 10px solid rgb(184, 164, 164);
-    margin-top: 3em;
+    border-bottom: 1px solid black;
+    margin-bottom: 2em;
+    padding: 1em 0.5em 2em 0.5em;
     font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+}
 }
 .imgServicios {
     display: flex;
@@ -33,35 +37,56 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 1em;
+    margin-bottom: 1em;
     img {
         width: 280px;
         height: 180px;
     }
+    figcaption {
+        margin-bottom: 3em;
+    }
 }
-.serviciosRealizadosTitulo {
+.serviciosRealizados {
+    background-color: rgb(48, 48, 48);
+    padding-bottom: 4em;
+    padding-top: 2em;
+    margin-bottom: 4em;
+    h2 {
     text-align: center;
-    border-bottom: 1px solid gainsboro;
+    padding-bottom: 1em;
+    border-bottom: 1px solid white;
     font-family: 'Roboto Slab', serif;
+    color: white;
     font-size: 25px;
-}
-.serviciosRealizadosSubtitulo {
+    margin-bottom: 1em;
+    }
+    h3 {
     font-style: italic;
     text-align: center;
     font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-}
-.serviciosRealizados h4 {
-    font-style: italic;
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
+    color: white;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    }
+    h4 {
+    font-style: italic;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    }
+}
+.slider {
+    z-index: 1;
 }
 .contendedorSlider {
     margin: auto;
     background-color: white;
     width: 800px;
+    height: 400px;
     padding: 20px;
 }
 ul li {
@@ -99,9 +124,10 @@ ul.slider li:target {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 5em;
 }
 .menu li a {
-    color: rgb(48, 48, 48);
+    color: white;
     margin: 5px;
 }
 .yorkshire img {
@@ -117,24 +143,13 @@ ul.slider li:target {
 
 @media (min-width: 768px) {
     .grillaServicios {
-            gap: 3em;
-            padding: 2em;
+        gap: 2em;
+        padding: 1em;  
     }
-    .mainServicios {
-        padding-bottom: 60px;
-        border-bottom: 1px solid rgb(31, 31, 31);
-        margin-top: 1em;
+    .serviciosRealizados {
+        margin: 2em;
     }
-    .serviciosRealizadosTitulo {
-        text-align: center;
-    }
-    .serviciosRealizadosSubtitulo {
-        font-style: italic;
-        text-align: center;
-    }    
-    .serviciosRealizados h5 {
-        font-style: italic;
-    }
+    
     .serviciosRealizadosImg img {
             width: 300px;
             height: 300px;
@@ -153,8 +168,10 @@ ul.slider li:target {
     }
 @media (min-width:820px) {
     .yorkshireImg {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 5em; 
     }
 }
 @media (min-width: 1024px) {
@@ -185,6 +202,6 @@ ul.slider li:target {
     }
     .serviciosRealizadosTitulo {
         text-align: center;
-        margin: 7% 40% 3% 40%;
+        margin: 2em 4em 2em 2em;
     }
 }
