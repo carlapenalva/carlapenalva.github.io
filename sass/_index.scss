@@ -122,7 +122,15 @@ font-size: small;
 
         img {
             height: 220px;
-            box-shadow: 0 -10 10px grey;
+            box-shadow: 10px 10px 10px rgb(48, 48, 48);
         } 
     }  
+}
+@media (min-width:1024px) {
+    .seccionIndex {
+        img {
+            margin-bottom: 2em;
+            box-shadow: 1.5em 1.5em 1.5em rgb(48, 48, 48)
+        }
+    }
 }
